@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu");
+* {
+  font-family: 'Ubuntu', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  background: #f1f1f1;
+  overflow-x: hidden; }
+
+#showcase {
+  background-image: url("/img/showcase.jpg");
+  width: 100vw;
+  min-height: 600px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0px -100px; }
+
+.sub-showcase {
+  margin-top: 350px; }
+
+.grid {
+  display: grid;
+  grid-gap: 40px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); }
+
+.cover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+  opacity: 1;
+  transition: opacity 0.3s, transform 0.3s;
+  transform: scale(1); }
+
+.blog-item {
+  width: 376px;
+  background: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s; }
+  .blog-item:hover {
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.3); }
+  .blog-item a {
+    color: inherit;
+    text-decoration: none; }
+
+.card__thumb {
+  height: 200px;
+  overflow: hidden;
+  background-color: #000;
+  transition: height 0.3s;
+  position: relative; }
+  .card:hover .card__thumb img {
+    opacity: 0.6;
+    transform: scale(1.2); }
+  .blog-item:hover .card__thumb {
+    height: 130px; }
+
+.card__body {
+  position: relative;
+  padding: 20px;
+  height: 185px;
+  transition: height 0.3s; }
+  .blog-item:hover .card__body {
+    height: 255px; }
+
+.card__category {
+  position: absolute;
+  top: -25px;
+  left: 0;
+  height: 25px;
+  padding: 0 15px;
+  background: #fc480b;
+  color: #fff;
+  font-size: 11px;
+  line-height: 25px; }
+  .card__category a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase; }
+
+.card__title {
+  padding: 0 0 10px 0;
+  margin: 0;
+  font-size: 22px;
+  color: #000;
+  font-weight: bold; }
+
+.card__subtitle {
+  margin: 0;
+  padding: 0 0 10px 0;
+  color: #fc480b;
+  font-size: 19px; }
+
+.card__description {
+  left: 20px;
+  right: 20px;
+  bottom: 65px;
+  margin: 0;
+  padding: 0;
+  color: #666c74;
+  font-size: 14px;
+  line-height: 27px;
+  opacity: 0;
+  transition: opacity 0.2s, transform 0.2s;
+  transition-delay: 0s;
+  transform: translateY(25px); }
+  .blog-item:hover .card__description {
+    opacity: 1;
+    transition-delay: 0.1s;
+    transform: translateY(0); }
+
+.card__footer {
+  color: #a3a9ab;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  font-size: 11px; }
+  .card__footer .icon--comment {
+    margin-left: 20px; }
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 2px; }
+  .icon:before {
+    display: inline-block;
+    text-align: center;
+    height: 14px;
+    width: 14px;
+    margin-top: -2px;
+    margin-right: 6px; }
+
+.icon--comment:before {
+  content: "\f0e6 ";
+  display: inline-block;
+  font: normal normal normal 16px/1 FontAwesome;
+  text-rendering: auto;
+  transform: translate(0, 0); }
+
+.icon--time:before {
+  content: "\f017 ";
+  display: inline-block;
+  font: normal normal normal 16px/1 FontAwesome;
+  text-rendering: auto;
+  transform: translate(0, 0); }
+
+@keyframes titleBlur {
+  0% {
+    opacity: 0.6;
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.6); }
+  100% {
+    opacity: 1;
+    text-shadow: 0px 5px 5px transparent; } }
+
+@keyframes subtitleBlur {
+  0% {
+    opacity: 0.6;
+    text-shadow: 0px 5px 5px rgba(252, 72, 11, 0.6); }
+  100% {
+    opacity: 1;
+    text-shadow: 0px 5px 5px rgba(252, 72, 11, 0); } }
+
+footer {
+  padding: 10px 10px; }
+
+#footer {
+  background: black;
+  padding: 30px 10px; }
+  #footer ul {
+    list-style: none; }
+  #footer a {
+    color: black;
+    text-decoration: none; }
+  #footer a:hover {
+    color: black; }
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px; }
+
+.crop {
+  height: 70px;
+  width: 90px;
+  overflow: hidden; }
+  .crop img {
+    height: auto;
+    width: 90px;
+    min-height: 70px;
+    cursor: pointer; }
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  /* Styles */
+  #showcase {
+    min-height: 100vh; }
+  .sub-showcase {
+    margin-top: 20vh; }
+  .grid {
+    grid-gap: 0 5;
+    justify-content: center;
+    grid-template-columns: repeat(1, 1fr); }
+  .blog-item {
+    margin: 0 auto; }
+  .card__description {
+    transform: translateY(0);
+    opacity: 1; }
+  .card__body {
+    height: 255px; } }
