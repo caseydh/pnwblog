@@ -10,7 +10,7 @@ body {
   overflow-x: hidden; }
 
 #showcase {
-  background-image: url("/img/showcase.jpg");
+  background-image: url("img/showcase.jpg");
   width: 100vw;
   min-height: 600px;
   background-size: cover;
